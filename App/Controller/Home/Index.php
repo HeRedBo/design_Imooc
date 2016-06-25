@@ -5,7 +5,7 @@ class Index
 {
     static function test()
     {
-        
+
     }
 }
 
