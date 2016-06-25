@@ -1,11 +1,11 @@
-1.Ê×ÏÈÔÚgithubÉÏ´´½¨Ò»¸ö×ÊÔ´
-2.ÇĞ»»µ½Äã±¾µØÄ¿Â¼ÏÂ
+1.é¦–å…ˆåœ¨githubä¸Šåˆ›å»ºä¸€ä¸ªèµ„æº
+2.åˆ‡æ¢åˆ°ä½ æœ¬åœ°ç›®å½•ä¸‹
 3.git init
-4.git remote add origin xxxx.git //xxx.git¾ÍÊÇÄãÔÚÔ¶³ÌgithubÉÏ´´½¨×ÊÔ´httpµØÖ·
+4.git remote add origin xxxx.git //xxx.gitå°±æ˜¯ä½ åœ¨è¿œç¨‹githubä¸Šåˆ›å»ºèµ„æºhttpåœ°å€
 5.git add --all
 6.git commit -m 'add'
 7.git push origin master
-8.Íê³É
+8.å®Œæˆ
 
 
 git remote add origin https://github.com/HeRedBo/design_Imooc.git
