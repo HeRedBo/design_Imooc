@@ -14,37 +14,45 @@ spl_autoload_register("\\Imooc\\Loader::autoload");
 // $db = new Imooc\Database\PDO();
 // $db->connect('127.0.0.1','root','root','demo');
 // $db->query('select * from test');
-// $db->close();
+// // $db->close();
 
-class Page
-{
-    protected $strategy;
+$user = \Imooc\User(1);
 
-    public function index()
-    {
-        echo "AD:";
-        $this->strategy-> showAd();
-        echo "<hr>";
+$user->username = 'HeRedBo';
+$user->password = 'password';
+$user->mobile_phone = '112341234';
 
-        echo "Category:";
-        $this->straregy-> showCategory();
-    }
 
-    public function setStrategy(\Imooc\UserStrategy $strategy)
-    {
-        $this->strategy = $strategy;
-    }
-}
 
-$page = new Page();
-if(isset($GET['female']))
-{
-    $strategy = new \Imooc\MaleUserStrategy();
-}
-else
-{
-    $strategy = new \Imooc\FemaleUserStrategy();
-}
+// class Page
+// {
+//     protected $strategy;
+//
+//     public function index()
+//     {
+//         echo "AD:";
+//         $this->strategy-> showAd();
+//         echo "<hr>";
+//
+//         echo "Category:";
+//         $this->straregy-> showCategory();
+//     }
+//
+//     public function setStrategy(\Imooc\UserStrategy $strategy)
+//     {
+//         $this->strategy = $strategy;
+//     }
+// }
+//
+// $page = new Page();
+// if(isset($GET['female']))
+// {
+//     $strategy = new \Imooc\MaleUserStrategy();
+// }
+// else
+// {
+//     $strategy = new \Imooc\FemaleUserStrategy();
+// }
 
 
 ?>
