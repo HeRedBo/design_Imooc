@@ -1,13 +1,10 @@
 <?php
 namespace IMooc;
 
-interface IDatabase
-{
-    function connect($host,$user,$passwd,$dbname);
-    function query($sql);
-    function close();
-}
-
+/**
+ * 单例模式连接数据库
+ *
+ */
 class Database
 {
 
@@ -31,7 +28,7 @@ class Database
      * @date   2016-06-23
      * @return [type]     [description]
      */
-    public static function getInstace()
+    public static function getInstance()
     {
         if(self::$object)
         {
