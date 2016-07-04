@@ -13,7 +13,7 @@ class Loader
     static function autoload($class)
     {
         //var_dump($class);
-        require_once BASEDIR.'/'.str_replace('\\','/',$class).'php';
+        require_once BASEDIR.'/'.str_replace('\\','/',$class).'.php';
 
 
     }

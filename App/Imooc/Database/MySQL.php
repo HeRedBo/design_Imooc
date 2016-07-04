@@ -1,16 +1,15 @@
 <?php
 namespace Imooc\Database;
 
-use IMooc\IDatabase;
-
+use IMooc\Database\IDatabase;
 class MySQL implements IDatabase
 {
     protected $conn;
-
-    public function connect($host,$user,$passwd,$dbname)
+    public function connect($host, $user, $passwd, $dbname)
     {
-        error_reporting(E_ALL^E_NOTICE);
-        $conn = mysql_connect($host,$uer,$passwd);
+        # 屏蔽mysql函数相关错误
+        error_reporting(E_ALL &~E_NOTICE &~E_WARNING &~E_DEPRECATED);
+        $conn = mysql_connect($host,$user,$passwd);
         mysql_select_db($dbname,$conn);
         mysql_query('set name utf8');
         $this->conn = $conn;

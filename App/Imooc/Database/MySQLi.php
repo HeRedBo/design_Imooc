@@ -1,6 +1,6 @@
 <?php
 namespace Imooc\Database;
-use Imooc\IDatabase;
+use Imooc\Database\IDatabase;
 
 class MySQLi
 {
@@ -9,13 +9,13 @@ class MySQLi
     function connect($host,$user,$passwd,$dbname)
     {
         $conn = mysqli_connect($host,$user,$passwd,$dbname);
-        mysqli_query($conn);
+        mysqli_query($conn,'set names utf8');
         $this->conn = $conn;
     }
 
     function query($sql)
     {
-        return mysqli_query($sql);
+        return mysqli_query($this->conn,$sql);
     }
 
     function close()

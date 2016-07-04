@@ -1,7 +1,11 @@
 <?php
 namespace Imooc;
 
-class MaleUserStrategy implements UserStrategy
+use Imooc\IUserstrategy;
+/**
+ * 男性广告分类展示
+ */
+class MaleUserStrategy implements IUserstrategy
 {
 
     function showAd()
