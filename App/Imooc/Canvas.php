@@ -11,7 +11,7 @@ class Canvas
         $data = [];
         for ($i=0; $i < $height; $i++)
         {
-            for ($i=0; $i < $width; $i++)
+            for ($j=0; $j < $width; $j++)
             {
                 $data[$i][$j]  = '*';
             }
@@ -51,7 +51,7 @@ class Canvas
             {
                 echo $char;
             }
-            echo "<br/>".\n;
+            echo "<br/>\n";
         }
         $this->afterDraw();
     }

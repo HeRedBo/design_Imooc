@@ -6,7 +6,23 @@ include BASEDIR.'/Imooc/Loader.php';
 # 载入函数在注册到php函数库
 spl_autoload_register("\\Imooc\\Loader::autoload");
 
+# 原型模式演示代码（start）
+// $prototype = new Imooc\Canvas();
+// $prototype->init();
 //
+// $canvas1 = clone $prototype;
+// $canvas1->rect(3,6,4,12);
+// $canvas1->draw();
+// echo "===================<br/>";
+// $canvas2 = clone $prototype;
+// $canvas2->init();
+// $canvas2->rect(3,6,4,12);
+// $canvas2->draw();
+# 原型模式在于减少内存开销，提高代码的运行速度
+# 原型模式演示代码（end）
+
+
+
 // # 观察者模式演示代码 (start)
 // class Event extends \Imooc\EventGenerator
 // {
