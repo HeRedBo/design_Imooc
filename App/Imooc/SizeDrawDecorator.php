@@ -5,16 +5,16 @@ class SizeDrawDecorator implements IDrawDecorator
 {
     protected $size;
 
-    public function __construct($zide = '14px')
+    public function __construct($size = '14px')
     {
         $this->size = $size;
     }
 
     public function beforeDraw()
     {
-        echo "<div style ='color:blue;font-size:{$this->size}'>";
+        echo "<div style ='font-size:{$this->size}'>";
     }
-    
+
     public function afterDraw()
     {
         echo "<div>";

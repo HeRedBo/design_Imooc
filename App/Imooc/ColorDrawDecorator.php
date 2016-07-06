@@ -1,17 +1,21 @@
 <?php
 namespace Imooc;
+
+/**
+ * 颜色装饰器
+ */
 class ColorDrawDecorator implements IDrawDecorator
 {
     protected $color;
 
-    public function __construnct($color = "red")
+    public function __construct($color = "red")
     {
         $this->color = $color;
     }
 
-    public function beforDraw()
+    public function beforeDraw()
     {
-        echo "<div style='color: {$this->color}; width:100px;height:100px;'>";
+        echo "<div style='color: {$this->color};'>";
     }
 
     public function afterDraw()

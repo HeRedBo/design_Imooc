@@ -11,11 +11,7 @@ class Canvas
         $data = [];
         for ($i=0; $i < $height; $i++)
         {
-<<<<<<< HEAD
             for ($j=0; $j < $width; $j++)
-=======
-            for ($i=0; $i < $width; $i++)
->>>>>>> d74abb7404ddd5f435d5acd91179e36e239ae3d9
             {
                 $data[$i][$j]  = '*';
             }
@@ -24,11 +20,23 @@ class Canvas
         $this->data = $data;
     }
 
-    public function addDecorator(DrawDecorator $decorator)
+    /**
+     * 添加装饰器方法
+     * @author Red-Bo
+     * @date   2016-07-06
+     * @param  DrawDecorator $decorator [description]
+     */
+    public function addDecorator(IDrawDecorator $decorator)
     {
         $this->decorators[] = $decorator;
     }
 
+    /**
+     * 调用装饰器方法
+     * @author Red-Bo
+     * @date   2016-07-06
+     * @return [type]     [description]
+     */
     public function beforeDraw()
     {
         foreach ($this->decorators as $decorator)

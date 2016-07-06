@@ -6,6 +6,25 @@ include BASEDIR.'/Imooc/Loader.php';
 # 载入函数在注册到php函数库
 spl_autoload_register("\\Imooc\\Loader::autoload");
 
+
+
+
+
+
+# 装饰器模式(start)
+$canvas = new Imooc\Canvas();
+$canvas->init();
+$canvas->addDecorator(new \Imooc\ColorDrawDecorator('green'));
+$canvas->addDecorator(new \Imooc\SizeDrawDecorator('20px'));
+$canvas->rect(4,6,4,12);
+$canvas->draw();
+# 装饰器模式(end)
+
+
+
+
+
+
 # 原型模式演示代码（start）
 // $prototype = new Imooc\Canvas();
 // $prototype->init();
