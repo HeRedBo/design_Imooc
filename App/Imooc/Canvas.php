@@ -11,7 +11,11 @@ class Canvas
         $data = [];
         for ($i=0; $i < $height; $i++)
         {
+<<<<<<< HEAD
             for ($j=0; $j < $width; $j++)
+=======
+            for ($i=0; $i < $width; $i++)
+>>>>>>> d74abb7404ddd5f435d5acd91179e36e239ae3d9
             {
                 $data[$i][$j]  = '*';
             }

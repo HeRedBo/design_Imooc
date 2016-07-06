@@ -22,7 +22,6 @@ spl_autoload_register("\\Imooc\\Loader::autoload");
 # 原型模式演示代码（end）
 
 
-
 // # 观察者模式演示代码 (start)
 // class Event extends \Imooc\EventGenerator
 // {
