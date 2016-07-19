@@ -7,11 +7,19 @@ abstract class Controller
     protected $controller_name;
     protected $view_name;
 
+    /**
+     * 控制器构造方法
+     *
+     * @author Red-Bo
+     * @date   2016-07-17
+     * @param  string   $controller_name 控制器的名称
+     * @param  string   $view_name       视图的名称
+     */
     public function __construct($controller_name,$view_name)
     {
-        $this->controller_name = $controller_name;
-        $this->view_name = $this->view_name;
-        $this->template_dir = Application::getInstance()->base_dir.'/templates';
+        $this->controller_name  = $controller_name;
+        $this->view_name        = $this->view_name;
+        $this->template_dir     = Application::getInstance()->base_dir.'/templates';
     }
 
     /**
@@ -34,7 +42,7 @@ abstract class Controller
      * @author Red-Bo
      * @date   2016-07-01
      * @param  string  $file [模板文件名称]
-     * @return 
+     * @return
      */
     public function display($file)
     {

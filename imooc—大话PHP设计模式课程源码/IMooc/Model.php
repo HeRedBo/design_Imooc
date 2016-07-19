@@ -16,7 +16,6 @@ class Model
                 $this->observers[] = new $class;
             }
         }
-
     }
 
     function notify($event)

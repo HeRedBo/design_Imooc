@@ -44,10 +44,9 @@ class Application
         list($c,$v) = explode('/',trim($uri,'/'));
 
         $c_low = strtolower($c);
-        $c     = ucwords($c); //首字母大写
+        $c     = ucwords($c);   //首字母大写
         $class = '\\App\\Controller\\'.$c;
         $obj   = new $class($c,$v);
-
         $controller_config = $this->config['controller'];
         $decorators = [];
         if(isset($controller_config[$c_low]['decorator']))
@@ -71,11 +70,6 @@ class Application
             }
 
         }
-
-
-
-
-
     }
 
 }
